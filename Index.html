@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spoof Identity Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="menu-bar">
+    <div class="menu-item">
+      File
+      <div class="submenu">
+        <div class="submenu-item">New File</div>
+        <div class="submenu-item" onclick="openEncryptedFile()">Open File</div>
+        <div class="submenu-item" onclick="saveEncryptedHTML()">Save File</div>
+      </div>
+    </div>
+    <div class="menu-item">Edit</div>
+    <div class="menu-item">Selection</div>
+    <div class="menu-item">View</div>
+    <div class="menu-item">
+      Window
+      <div class="submenu">
+        <div class="submenu-item" onclick="openTerminal()">CLI</div>
+      </div>
+    </div>
+    <div class="menu-item">Help</div>
+  </div>
+
+  <div class="main-content">
+    <div class="interface-title">
+      <button class="shortcut-button" style="background:#2d2d2d; color:white; font-size:18px;">Identity Access Manager</button>
+    </div>
+
+    <div class="dashboard">
+      <div class="card">
+        <h3>System Overview</h3>
+        <p><strong>Users:</strong> 1245</p>
+        <p><strong>Groups:</strong> 87</p>
+        <p><strong>Instances:</strong><span id="instance-count" class="count-text"> 12</span></p>
+      </div>
+
+      <div class="card">
+        <h3>Active Services</h3>
+        <p><strong>LDAP Server:</strong> <span id="ldap-status" class="status-text">Not Connected</span></p>
+        <p><strong>SOS Interface:</strong> <span id="sos-status" class="status-text">Not Connected</span></p>
+        <p><strong>Database:</strong> Connected</p>
+        <p><strong>Replication:</strong> Active</p>
+      </div>
+
+      <div class="card">
+        <h3>Pending Requests</h3>
+        <p>• 5 User Approvals</p>
+        <p>• 2 Password Resets</p>
+        <p>• 1 Access Request</p>
+      </div>
+
+      <div class="card">
+        <h3>Shortcuts</h3>
+        <button class="shortcut-button">Add User</button>
+        <button class="shortcut-button">Monitor Servers</button>
+        <button class="shortcut-button">Generate Report</button>
+      </div>
+    </div>
+
+    <div class="terminal" id="terminal">
+      <div id="terminal-output"></div>
+      <input type="text" id="terminal-input" placeholder="Type your command here..." onkeydown="handleCommand(event)">
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

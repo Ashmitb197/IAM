@@ -1,0 +1,114 @@
+body {
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-bar {
+    background-color: #2c2c2c;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    user-select: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  }
+  
+  .menu-item {
+    position: relative;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #3a3a3a;
+    min-width: 120px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    z-index: 1000;
+  }
+  
+  .submenu-item {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .submenu-item:hover {
+    background-color: #555;
+  }
+  
+  .menu-item:hover .submenu {
+    display: block;
+  }
+  
+  .main-content {
+    padding: 20px;
+  }
+  
+  .interface-title {
+    margin-bottom: 20px;
+  }
+  
+  .dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background: #2d2d2d;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  }
+  
+  .shortcut-button {
+    margin: 5px 5px 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #0078D4;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .terminal {
+    margin-top: 30px;
+    background: #000;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #terminal-output {
+    height: 150px;
+    overflow-y: auto;
+    font-family: monospace;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  #terminal-input {
+    padding: 10px;
+    border: none;
+    width: 100%;
+    background: #1e1e1e;
+    color: white;
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  .status-text {
+    font-weight: bold;
+  }
+  
