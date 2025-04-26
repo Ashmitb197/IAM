@@ -12,7 +12,7 @@ function openTerminal() {
   
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'saved_page.ibmsave';
+    a.download = 'saved_page.iamSave';
     document.body.appendChild(a);
     a.click();
   
@@ -23,7 +23,7 @@ function openTerminal() {
   function openEncryptedFile() {
     const input = document.createElement('input');
     input.type = 'file';
-    input.accept = '.ibmsave';
+    input.accept = '.iamSave';
   
     input.onchange = (event) => {
       const file = event.target.files[0];
